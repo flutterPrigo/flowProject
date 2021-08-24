@@ -10,7 +10,7 @@ import 'package:xr_dumy/theme/app_color.dart';
 class RegisterScreen extends StatelessWidget {
   static const routeName = '/registerScreen';
 
-  RegisterController _registerController = Get.put(RegisterController());
+  final RegisterController _registerController = Get.put(RegisterController());
 
   @override
   Widget build(BuildContext context) {

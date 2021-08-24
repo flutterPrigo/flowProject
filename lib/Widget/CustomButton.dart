@@ -17,7 +17,7 @@ class CustomButton extends StatelessWidget {
         color: AppColor.appColors,
       ),
       child: Text(
-        'LOGIN',
+        name,
         style: TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.w500,

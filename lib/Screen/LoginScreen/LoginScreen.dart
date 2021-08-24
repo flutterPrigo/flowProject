@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
-import 'package:xr_dumy/Screen/HomeScreen/HomeScreen.dart';
 import 'package:xr_dumy/Screen/LoginScreen/LoginController.dart';
 import 'package:xr_dumy/Screen/RegisterScreen/RegisterScreen.dart';
 import 'package:xr_dumy/Widget/CustomButton.dart';
@@ -40,9 +39,9 @@ class LoginScreen extends StatelessWidget {
                     height: 4.h,
                   ),
                   Form(
-                    key: _loginScreenController.formLoginKey,
+                    key: _loginScreenController.formKey,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         CustomTextFormField(
                           controller: _loginScreenController.emailController,
@@ -63,6 +62,16 @@ class LoginScreen extends StatelessWidget {
                             log(_loginScreenController.passwordController.text);
                           },
                         ),
+
+                        SizedBox(
+                          height: 50.h,
+                        ),
+                        InkWell(
+                          onTap: () {
+                            _loginScreenController.userLogin();
+                          },
+                          child: CustomButton(name: 'LOGIN'),
+                        ),
                         SizedBox(
                           height: 1.h,
                         ),
@@ -71,21 +80,13 @@ class LoginScreen extends StatelessWidget {
                             Get.toNamed(RegisterScreen.routeName);
                           },
                           child: Text(
-                            'Register Here',
+                            'Register',
                             style: TextStyle(
-                              fontSize:10.sp,
-                              color: AppColor.red,
+                              fontSize: 15.sp,
+                              color: AppColor.blackColor
+                              ,
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 50.h,
-                        ),
-                        InkWell(
-                          onTap: () {
-                            Get.offAndToNamed(HomeScreen.routeName);
-                          },
-                          child: CustomButton(name: 'LOGIN'),
                         ),
                       ],
                     ),

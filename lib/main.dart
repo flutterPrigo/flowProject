@@ -4,6 +4,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:sizer/sizer.dart';
 import 'package:xr_dumy/Controller/Authentication.dart';
 import 'package:xr_dumy/Screen/LoginScreen/LoginScreen.dart';
+import 'package:xr_dumy/Screen/SecondScreen/SecondScreen.dart';
 
 import 'Screen/HomeScreen/HomeScreen.dart';
 import 'Screen/RegisterScreen/RegisterScreen.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
             GetPage(name: LoginScreen.routeName, page: () => LoginScreen()),
             GetPage(name: HomeScreen.routeName, page: () => HomeScreen()),
             GetPage(name: RegisterScreen.routeName, page: () => RegisterScreen()),
+            GetPage(name: SecondScreen.routeName, page: () => SecondScreen()),
           ],
           initialRoute: SplashScreen.routeName,
           initialBinding: AuthBinding(),
