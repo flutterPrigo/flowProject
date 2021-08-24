@@ -14,6 +14,7 @@ dependencies:
   sizer: ^2.0.13
   get_storage: ^2.0.3
   http: ^0.13.3
+  fluttertoast: ^8.0.8
 
 dev_dependencies:
   flutter_test:
